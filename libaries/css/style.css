@@ -1,0 +1,132 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    background-color: #f3f3f9 !important;
+}
+.fz-10{
+    font-size: 10px !important;
+}
+.fz-11{
+    font-size: 11px !important;
+}
+.fz-12{
+    font-size: 12px !important;
+}
+.fz-13{
+    font-size: 13px !important;
+}
+.fz-14{
+    font-size: 14px !important;
+}
+.fz-15{
+    font-size: 15px !important;
+}
+.fz-16{
+    font-size: 16px !important;
+}
+.fz-18{
+    font-size: 18px !important;
+}
+.fz-20{
+    font-size: 20px !important;
+}
+.text-coler{
+    color: #555555 !important;
+}
+.logo-index{
+    width: 100px;
+    height: 60px;
+}
+.icon-item i{
+    font-size: 22px !important;
+    color: #7D7878;
+    padding: 15px;
+}
+.icon-item.fa-user{
+    padding-left: 30px !important;
+}
+.bx.bx-search-alt-2{
+    font-size: 24px !important;
+}
+/* menu header  */
+.menu-item-a {
+    color: #555555;
+    text-decoration: none;
+}
+.menu-item-a.active {
+
+    content: "";
+    margin-top: 3px;
+    border-bottom: 4px solid #14b6a0;
+    transition: ease-in-out 0.3s;
+    color: #14b6a0;
+}
+.menu-li-item {
+    position: relative;
+}
+.ul-menu-header {
+    display: none;
+    background-color: #ffffff;
+    min-width: 250px;
+    padding: 0 10px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 6px rgba(33, 33, 33, 0.2);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+}
+.li-menu-header:hover {
+    cursor: pointer;
+    background-color: #f3f3f9;
+    color: #6b6c6e;
+}
+.li-menu-header {
+    list-style: none !important;
+    padding: 10px 8px;
+}
+.li-menu-header a{
+    color: #555555 !important;
+}
+.li-menu-header a:hover {
+    color: #3e3e3e;
+}
+.menu-li-item:hover > .ul-menu-header {
+    display: block;
+}
+.dropdown-sub {
+    position: relative;
+}
+.dropdown-sub ul {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 1000;
+}
+.dropdown-sub:hover ul {
+    display: block;
+}
+
+
+/* // icon-mxh  */
+.fa-facebook{
+    color: #4267B2 !important;
+}
+.fa-square-instagram{
+    color: #C13584 !important;
+}
+.fa-youtube{
+    color: #C4302B !important;
+}
+.fa-square-twitter{
+    color: #1DA1F2 !important;
+}
+.input-group input{
+    border-radius: 0 !important;
+}
+.input-group button{
+    border-radius: 0 !important;
+}
