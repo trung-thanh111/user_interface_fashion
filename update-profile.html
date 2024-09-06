@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cửa hàng thời trang - thông tin cá nhân</title>
+    <title>Cửa hàng thời trang - chỉnh sửa thông tin cá nhân</title>
     <!-- css  -->
     <link rel="stylesheet" href="/libaries/css/style.css">
     <!-- icon  -->
@@ -192,7 +192,7 @@
                     <div class="body-profile">
                         <div class="row">
                             <div class="col-lg-3 col-md-4 flex-grow-1 mb-3">
-                                <div class="card card-height-100 ">
+                                <div class="card border-0 card-height-100 ">
                                     <div class="card-header align-items-center d-flex">
                                         <h6 class="card-title mb-0 flex-grow-1 fz-18 pt-2 pb-2">Thông tin </h6>
                                     </div><!-- end card header -->
@@ -341,50 +341,81 @@
                                     <!-- end cardbody -->
                                 </div>
                             </div>
-                            <div class="col-lg-9 col-md-8 flex-grow-1">
+                            <div class="col-lg-9 col-md-8 flex-grow-1"> 
                                 <div class="article-profile">
-                                    <div class="card mb-3">
+                                    <div class="card border-0 mb-3">
                                         <div class="card-header border-0">
-                                            <h6 class="card-title mb-0 flex-grow-1 fz-18 pt-2 pb-2">Thông tin cá nhân
+                                            <h6 class="card-title mb-0 flex-grow-1 fz-18 pt-2 pb-2">Cập nhật thông tin
                                             </h6>
                                         </div><!-- end cardheader -->
                                     </div>
-                                    <div class="card ">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-between align-items-center flex-grow">
-                                                <div>
+                                    <div class="card border-0 ">
+                                        <div class="card-body fz-16">
+                                            <div class="flex-grow">
                                                     <h6 class="card-title mb-0 flex-grow-1 fz-16 pt-2 pb-1">Thông tin
                                                     </h6>
-                                                    <p class="fz-14">Chứng tôi sẽ liên lạc với bạn thông qua nhưng thông tin bên dưới!</p>
-                                                </div>
-                                                <a href="#"><i class="fa-solid fa-pen fz-18 text-muted pe-3" data-bs-toggle="tooltip" data-bs-title="Chỉnh sửa thông tin"></i></a>
+                                                    <p class="fz-14">Hãy chắc rằng thông tin bạn đang nhập là chính xác! </p>
                                             </div>
-                                            <div class="table-reposive mt-5">
-                                                <table class="table table-borderless align-middle ps-lg-3">
-                                                    <thead>
-                                                        <tr class="">
-                                                            <td>Hình ảnh</td>
-                                                            <th>
-                                                                <img src="/libaries/images/user-default.avif" alt=""
-                                                                    class="user-account object-fit-cover rounded-circle"
-                                                                    width="60px" height="60px">
-                                                            </th>
-
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Họ tên</td>
-                                                            <th>phạm thanh trung</th>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Email</td>
-                                                            <th>thanhtrungw0wer9wetwetw</th>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Ngày sinh</td>
-                                                            <th>24/54/2492</th>
-                                                        </tr>
-                                                    </thead>
-                                                </table>
+                                            <div class="mt-5">
+                                                <form action="#" method="#" enctype="multipart/form-data">
+                                                    <div class="row">
+                                                        <div class="col-lg-9 col-md-9 col-sm-12">
+                                                            <div class="row">
+                                                                <div class="col-lg-6 .col-md-6 col-sm-12">
+                                                                    <div class="mb-3">
+                                                                        <label class="form-label">Họ và tên</label>
+                                                                        <input type="text" class="form-control" name=""
+                                                                            placeholder="Họ và tên"
+                                                                            value="Phạm thanh trung">
+                                                                        
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-6 .col-md-6 col-sm-12">
+                                                                    <div class="mb-3">
+                                                                        <label class="form-label">Ngày sinh</label>
+                                                                        <input type="date" class="form-control" name=""
+                                                                            placeholder="Họ và tên"
+                                                                            value="Phạm thanh trung">
+                                                                        
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-6 .col-md-6 col-sm-12">
+                                                                    <div class="mb-3">
+                                                                        <label class="form-label">Email</label>
+                                                                        <input type="text" class="form-control" name="email"
+                                                                            placeholder="email"
+                                                                            value="thanhtrunf3745734523">
+                                                                        
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-6 .col-md-6 col-sm-12">
+                                                                    <div class="mb-3">
+                                                                        <label class="form-label">Số điện thoại </label>
+                                                                        <input type="text" class="form-control" name=""
+                                                                            placeholder="Số điện thoại"
+                                                                            value="09683496343">
+                                                                        
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3 col-md-3 col-sm-12 text-center">
+                                                            <img src="/libaries/images/user-default.avif" alt="" class="rounded-circle mb-3" width="100" height="100">
+                                                            <input type="file"  name="image" class="form-control mb-1">
+                                                            <p class="fz-12">Chấp nhận định dạng JPG, PNG, Webp</p>
+                                                        </div>
+                                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                                            <div class="mb-3">
+                                                                <label class="form-label">Giới thiệu</label>
+                                                                <textarea name="" id="" class="form-control" rows="3"></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="text-end mb-3">
+                                                            <button type="submit" class="cancel btn btn-outline-secondary rounded-1 px-4 me-2">Hủy</button>
+                                                            <button type="submit" class="accept btn btn-success rounded-1 px-4">Xác nhận</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
