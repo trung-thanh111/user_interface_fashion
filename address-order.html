@@ -19,6 +19,10 @@
     <!-- bootstrap5 css  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- animation  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- select2 css  -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -118,8 +122,8 @@
     </section>
     <section>
         <header>
-            <div class="container-fuild">
-                <nav class="navbar navbar-expand-lg bg-body-tertiary p-0">
+            <div class="container-fuild ">
+                <nav class="navbar navbar-expand-lg shadow-sm bg-white p-0 sticky-nav">
                     <div class="container p-0">
                         <a class="navbar-brand" href="#"><img src="/libaries/images/app_icon.png"
                                 class="object-fit-cover logo-index" alt=""></a>
@@ -479,13 +483,56 @@
                                                     đến tay bạn!</p>
                                             </div>
                                             <div class="box-address-order mt-4">
+
                                                 <hr>
                                                 <div class="address-order">
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        <div class="order-info d-flex align-items-center ">
-                                                            <h6>phạm thanh trung</h6> |
-                                                            <span>09534960346</span>
+                                                    <div class="hstack gap-3">
+                                                        <div class="p-2">
+                                                            <span class="fw-bold text-muted">Phạm thanhtrung</span>
                                                         </div>
+                                                        <div class="vr"></div>
+                                                        <div class="p-2">
+                                                            <span
+                                                                class="fz-16 fw-400"><strong>(84+)</strong>0956456453</span>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <span class="p-2 ellipsis-vertical">
+                                                                <i
+                                                                    class="fa-solid fa-ellipsis-vertical fz-14 text-muted"></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="dropdown-ellipsis-vertical d-none rounded-2"
+                                                            style="top: 128px;">
+                                                            <ul class="ul-menu p-0 dropdown-content mb-1">
+                                                                <li class="li-menu-header p-1">
+                                                                    <a href="#" class="text-decoration-none fz-12 ps-1">
+                                                                        <i class="fa-solid fa-pen me-2"></i>Cập nhật
+                                                                    </a>
+                                                                </li>
+                                                                <li class="li-menu-header p-1">
+                                                                    <a href="#"
+                                                                        class="text-decoration-none fz-12 ps-1 text-danger">
+                                                                        <i
+                                                                            class="fa-solid fa-arrow-right-from-bracket me-2"></i>Đăng
+                                                                        xuất
+                                                                    </a>
+                                                                </li>
+                                                                <hr>
+                                                                <li class="li-menu-header p-1">
+                                                                    <a href="#"
+                                                                        class="text-decoration-none fz-12 ps-1 text-muted">
+                                                                        <i class="fa-solid fa-circle-info me-2"></i>Hỗ
+                                                                        trợ
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="detail-address">
+                                                        <i class="fa-solid fa-map-pin mx-2 text-muted"></i>
+                                                        <span class="fz-14">98 100, Tân thới nhất 5, Quận 12, Thành phố
+                                                            HCM</span>
+                                                        <p class="default-address mt-2">Mặc định</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -608,7 +655,6 @@
     </section>
     <!-- end footer  -->
 </body>
-
 <!-- jQuery  -->
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous"></script>
@@ -624,6 +670,8 @@
     crossorigin="anonymous"></script>
 <!-- splide js  -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/js/splide.min.js"></script>
+<!-- select2 js  -->
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <!-- js  -->
 <script src="/libaries/js/script.js"></script>
 <!-- jquery  -->

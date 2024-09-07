@@ -313,13 +313,24 @@ a{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
+.dropdown-ellipsis-vertical {
+    background-color: #ffffff;
+    min-width: 140px;
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
 
 
 .app-search{
         min-width: 350px;
     
 }
-
+.nav{
+    padding-left: 12% !important;
+}
 .content-search-mnpoly:hover{
     text-decoration: underline !important;
 }
@@ -388,6 +399,27 @@ a{
 hr {
     margin: 0.3rem 0 !important;
 }
+/* address order  */
+.vr{
+    color: #495057;
+    width: 3px !important;
+    opacity: 100% !important;
+    height: 20px !important;
+    margin-top: 10px;
+}
+.default-address{
+    background-color: #e1ebfd;
+    color: #3577f1;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    max-width: 80px;
+    font-weight: 500;
+}
+.default-address:hover{
+    background-color: #c3d6f8;
+    transition: ease-in-out 0.3s;
+}
 /* search recent */
 .search-recent-item{
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
@@ -426,6 +458,35 @@ hr {
 }
 .sub-sub-menu-ul{
     padding-left: 70px;
+}
+
+/* select2 custom  */
+.select2-container .select2-selection--single {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    height: 37px !important;
+    border-color: #e7eaed !important;
+    border-radius: 0 !important;
+    color: #595c5f !important;
+}
+.select2-container .select2-selection--single .select2-selection__rendered {
+    display: block;
+    padding-left: 10px !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #595c5f !important;
+    line-height: 33px !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 35px !important;
+    position: absolute;
+    top: 1px;
+    right: 5px !important;
+    width: 20px;
 }
 
 /* update acount  */
@@ -488,4 +549,10 @@ hr {
 
 .input-group button {
     border-radius: 0 !important;
+}
+/* footer  */
+footer{
+    margin-top: 50px;
+    background-color: #E5E5E5 ;
+    padding-top: 40px ;
 }
