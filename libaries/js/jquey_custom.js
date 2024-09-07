@@ -67,10 +67,35 @@
       }
     });
   };
+  // search key
+  FS.searchKeyUpShowPaper = () => {
+    // Bắt sự kiện lần đầu nhập vào input -> one()
+    $(document).one("keyup", ".search-header", function () {
+      if (
+        $(".search-header").val().length == 0 ||
+        $(".search-header") === undefined
+      ) {
+        $(".wallpaper").addClass("d-none");
+      } else {
+        $(".wallpaper").removeClass("d-none");
+      }
+      //call back
+      FS.searchKeyUpShowPaper();
+    });
+    $(document).on("blur", ".search-header", function () {
+      $(".wallpaper").addClass("d-none");
+    });
+    $(document).on("focus", ".search-header", function () {
+      if ($(".search-header").val().length > 0) {
+        $(".wallpaper").removeClass("d-none");
+      }
+    });
+  };
 
   $(document).ready(function () {
     FS.animateMenuLink();
     FS.showSubMenu();
     FS.showSubMenuLv3();
+    FS.searchKeyUpShowPaper();
   });
 })(jQuery);

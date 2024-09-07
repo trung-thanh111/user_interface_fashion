@@ -18,3 +18,8 @@ const tooltipTriggerList = document.querySelectorAll(
 const tooltipList = [...tooltipTriggerList].map(
   (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
 );
+// offcanvas
+const offcanvasElementList = document.querySelectorAll(".offcanvas");
+const offcanvasList = [...offcanvasElementList].map(
+  (offcanvasEl) => new bootstrap.Offcanvas(offcanvasEl)
+);
