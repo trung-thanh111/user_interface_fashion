@@ -31,19 +31,83 @@
                         <div class="splide" id="promo-carousel">
                             <div class="splide__track">
                                 <ul class="splide__list fz-14">
-                                    <li class="splide__slide">
+                                    <li class="splide__slide text-truncate">
                                         <span>Khuyến mãi 50% cho đơn hàng đầu tiên</span>
                                     </li>
-                                    <li class="splide__slide">
+                                    <li class="splide__slide text-truncate">
                                         <span>Miễn phí vận chuyển cho đơn hàng trên 500k</span>
                                     </li>
-                                    <li class="splide__slide">
+                                    <li class="splide__slide text-truncate">
                                         <span>Giảm 20% khi thanh toán qua thẻ</span>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="fw-medium">
+                        <div class="">
+                            <form action="#" method="get" class="app-search d-none d-md-block ">
+                                <div class="input-group input-group-sm w-100 position-relative ">
+                                    <input type="text" name="keyword" class="form-control search-header rounded-start-2"
+                                        aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"
+                                        placeholder="bạn đang cần gì?">
+                                    <button type="submit" class="input-group-text" id="inputGroup-sizing-sm">
+                                        <i class='bx bx-search-alt-2'></i>
+                                    </button>
+                                </div>
+                                <div class="wallpaper d-none position-absolute start-50 translate-middle z-3"
+                                    style="top: 165px;">
+                                    <div class="card p-2 border-0 mt-2 rounded-1 shadow-sm justify-content-center"
+                                        style="width: 500px !important">
+                                        <div class="card-body py-2 px-2">
+                                            <div class="title-search-recent">
+                                                <h6 class="text-overflow text-muted mb-0 text-uppercase fz-13">Tìm kiếm
+                                                    gần gây</h6>
+                                            </div>
+                                            <div class="content-search-recent mt-3">
+                                                <span class="search-recent-item m-1 fz-14 ">
+                                                    <a href="#" class="text-decoration-none text-muted">
+                                                        <i class='bx bx-search-alt-2 fz-16 me-2'></i> Sản phẩm độc quyền
+                                                        của chúng tôi
+                                                    </a>
+                                                </span>
+                                                <span class="search-recent-item m-1 fz-14 ">
+                                                    <a href="#" class="text-decoration-none text-muted">
+                                                        <i class='bx bx-search-alt-2 fz-16 me-2'></i> Iphone 15
+                                                    </a>
+                                                </span>
+                                                <span class="search-recent-item m-1 fz-14 ">
+                                                    <a href="#" class="text-decoration-none text-muted">
+                                                        <i class='bx bx-search-alt-2 fz-16 me-2'></i> Iphone 15
+                                                    </a>
+                                                </span>
+                                                <span class="search-recent-item m-1 fz-14 ">
+                                                    <a href="#" class="text-decoration-none text-muted">
+                                                        <i class='bx bx-search-alt-2 fz-16 me-2'></i> Iphone 15
+                                                    </a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="card-body py-2 px-2">
+                                            <div class="title-search-recent">
+                                                <h6 class="text-overflow text-muted mb-0 text-uppercase fz-13">Danh sách
+                                                    nổi bật</h6>
+                                            </div>
+                                            <div class="content-search-hot mt-3">
+                                                <ul>
+                                                    <li
+                                                        class="list-unstyled d-flex justify-content-between align-items-center text-muted mb-2">
+                                                        <a href="#" class="content-search-mnpoly text-muted">Sản phẩm
+                                                            độc quyền</a>
+                                                        <i class="fa-solid fa-bookmark " data-bs-toggle="tooltip"
+                                                            data-bs-title="top tìm kiếm"></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="fw-medium d-none d-lg-block">
                             <span>Cửa hàng </span>
                             <span class="ms-2">Hotline: <a href="#">0900112583</a></span>
                         </div>
@@ -59,18 +123,19 @@
                     <div class="container p-0">
                         <a class="navbar-brand" href="#"><img src="/libaries/images/app_icon.png"
                                 class="object-fit-cover logo-index" alt=""></a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#"
-                            aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse justify-content-lg-center justify-content-md-center justify-content-sm-start"
-                            id="">
+                            id="navbarSupportedContent">
                             <ul
                                 class="nav fw-bold justify-content-lg-center justify-content-md-center justify-content-sm-start align-items-center text-color">
-                                <li class="menu-li-item p-3">
+                                <li class="menu-li-item px-2 py-3">
                                     <a href="#" class="menu-item-a text-decoration-none fz-18">Trang chủ</a>
                                 </li>
-                                <li class="menu-li-item p-3 dropdown align-items-center">
+                                <li class="menu-li-item px-2 py-3 dropdown align-items-center">
                                     <a href="#" class="menu-item-a text-decoration-none fz-18 dropdown-a">Cửa hàng <i
                                             class="fas fa-minus fz-12 fw-bold"></i></a>
                                     <ul class="ul-menu-header fw-medium p-0 dropdown-content">
@@ -82,7 +147,7 @@
                                                 class="text-decoration-none fz-16 text-color">Danh mục</a></li>
                                     </ul>
                                 </li>
-                                <li class="menu-li-item p-3 dropdown align-items-center">
+                                <li class="menu-li-item px-2 py-3 dropdown align-items-center">
                                     <a href="#" class="menu-item-a text-decoration-none fz-18 dropdown-a">Bài viết <i
                                             class="fas fa-minus fz-12 fw-bold"></i></a>
                                     <ul class="ul-menu-header fw-medium p-0 dropdown-content">
@@ -94,7 +159,10 @@
                                                 class="text-decoration-none fz-16 text-color">Danh mục</a></li>
                                     </ul>
                                 </li>
-                                <li class="menu-li-item p-3 dropdown align-items-center">
+                                <li class="menu-li-item px-2 py-3">
+                                    <a href="#" class="menu-item-a text-decoration-none fz-18">Liên hệ</a>
+                                </li>
+                                <li class="menu-li-item px-2 py-3 dropdown align-items-center">
                                     <a href="#" class="menu-item-a text-decoration-none fz-18 dropdown-a">Trang khác <i
                                             class="fas fa-minus fz-12 fw-bold"></i></a>
                                     <ul class="ul-menu-header fw-medium p-0 dropdown-content">
@@ -109,22 +177,76 @@
                             </ul>
 
                         </div>
-                        <div class="d-flex icon-header">
+                        <div class="d-flex icon-header align-items-center">
                             <div class="icon-item">
-                                <a href="#"><i class='bx bx-search-alt-2' data-bs-toggle="tooltip"
-                                        data-bs-title="Tìm kiếm"></i></a>
+                                <span class="box-icon-profile">
+                                    <a class="" data-bs-toggle="offcanvas" href="#offcanvasRight" role="button"
+                                        aria-controls="offcanvasRight">
+                                        <i class="fa-solid fa-bookmark" data-bs-toggle="tooltip"
+                                            data-bs-title="Yêu thích"></i>
+                                    </a>
+                                </span>
                             </div>
                             <div class="icon-item">
-                                <a href="#"><i class="fa-solid fa-bookmark" data-bs-toggle="tooltip"
-                                        data-bs-title="Yêu thích"></i></a>
+                                <span class="box-icon-profile">
+                                    <a href="#">
+                                        <i class="fa-solid fa-cart-shopping" data-bs-toggle="tooltip"
+                                            data-bs-title="Giỏ hàng"></i>
+                                    </a>
+                                </span>
                             </div>
-                            <div class="icon-item">
-                                <a href="#"><i class="fa-solid fa-cart-shopping" data-bs-toggle="tooltip"
-                                        data-bs-title="Giỏ hàng"></i></a>
-                            </div>
-                            <div class="icon-item">
-                                <a href="#"><i class="fa-solid fa-user" data-bs-toggle="tooltip"
-                                        data-bs-title="Tài khoản"></i></a>
+
+                            <div class="icon-item ">
+                                <!-- chưa đăng nhập  -->
+                                <!-- <span class="box-icon-profile">
+                                    <a class="acount-profile" href="#">
+                                        <i class="fa-solid fa-user fz-20 p-3" data-bs-toggle="tooltip"
+                                            data-bs-title=""></i>
+                                    </a>
+                                </span> -->
+                                <!-- đã đăng nhập  -->
+                                <button type="button" class="btn border-0 gear-profile dropdown-toggle "
+                                    data-bs-toggle="dropdown">
+                                    <span class="d-flex align-items-center">
+                                        <img class="rounded-circle header-profile-user"
+                                            src="/libaries/images/user-default.avif" alt="Avatar User"
+                                            class="rounded-circle object-fit-cover" width="40" height="40">
+                                        <span class="text-start ms-xl-2">
+                                            <span class="d-none d-xl-inline-block ms-1 fw-medium text-muted">Thanh
+                                                Trung</span>
+                                            <span class="d-none d-xl-block ms-1 fz-14 text-secondary">Quản trị
+                                                viên</span>
+                                        </span>
+                                    </span>
+                                </button>
+                                <div class="rounded-1 shadow-sm dropdown-menu border-0"
+                                    style="min-width: 180px; left: auto;">
+                                    <ul class="ul-menu p-0 dropdown-content mb-1 text-muted">
+                                        <li class="li-menu-header p-2">
+                                            <span class="text-decoration-none fw-medium fz-14 ps-1">
+                                                Xin chào thanh trung!
+                                            </span>
+                                        </li>
+                                        <li class="li-menu-header p-2">
+                                            <a href="#" class="text-decoration-none fz-12 ps-1">
+                                                <i class="fa-solid fa-pen me-2"></i>Cập nhật
+                                            </a>
+                                        </li>
+                                        <li class="li-menu-header p-2">
+                                            <a href="#" class="text-decoration-none fz-12 ps-1 text-danger">
+                                                <i
+                                                    class="fa-solid fa-arrow-right-from-bracket me-2 text-danger"></i>Đăng
+                                                xuất
+                                            </a>
+                                        </li>
+                                        <hr>
+                                        <li class="li-menu-header p-2">
+                                            <a href="#" class="text-decoration-none fz-12 ps-1 text-muted">
+                                                <i class="fa-solid fa-circle-info me-2"></i>Hỗ trợ
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -341,7 +463,7 @@
                                     <!-- end cardbody -->
                                 </div>
                             </div>
-                            <div class="col-lg-9 col-md-8 flex-grow-1"> 
+                            <div class="col-lg-9 col-md-8 flex-grow-1">
                                 <div class="article-profile">
                                     <div class="card border-0 mb-3">
                                         <div class="card-header border-0">
@@ -352,9 +474,10 @@
                                     <div class="card border-0 ">
                                         <div class="card-body fz-16">
                                             <div class="flex-grow">
-                                                    <h6 class="card-title mb-0 flex-grow-1 fz-16 pt-2 pb-1">Thông tin
-                                                    </h6>
-                                                    <p class="fz-14">Hãy chắc rằng thông tin bạn đang nhập là chính xác! </p>
+                                                <h6 class="card-title mb-0 flex-grow-1 fz-16 pt-2 pb-1">Thông tin
+                                                </h6>
+                                                <p class="fz-14">Hãy chắc rằng thông tin bạn đang nhập là chính xác!
+                                                </p>
                                             </div>
                                             <div class="mt-5">
                                                 <form action="#" method="#" enctype="multipart/form-data">
@@ -367,7 +490,7 @@
                                                                         <input type="text" class="form-control" name=""
                                                                             placeholder="Họ và tên"
                                                                             value="Phạm thanh trung">
-                                                                        
+
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-6 .col-md-6 col-sm-12">
@@ -376,16 +499,16 @@
                                                                         <input type="date" class="form-control" name=""
                                                                             placeholder="Họ và tên"
                                                                             value="Phạm thanh trung">
-                                                                        
+
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-6 .col-md-6 col-sm-12">
                                                                     <div class="mb-3">
                                                                         <label class="form-label">Email</label>
-                                                                        <input type="text" class="form-control" name="email"
-                                                                            placeholder="email"
+                                                                        <input type="text" class="form-control"
+                                                                            name="email" placeholder="email"
                                                                             value="thanhtrunf3745734523">
-                                                                        
+
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-6 .col-md-6 col-sm-12">
@@ -394,25 +517,30 @@
                                                                         <input type="text" class="form-control" name=""
                                                                             placeholder="Số điện thoại"
                                                                             value="09683496343">
-                                                                        
+
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-3 col-md-3 col-sm-12 text-center">
-                                                            <img src="/libaries/images/user-default.avif" alt="" class="rounded-circle mb-3" width="100" height="100">
-                                                            <input type="file"  name="image" class="form-control mb-1">
+                                                            <img src="/libaries/images/user-default.avif" alt=""
+                                                                class="rounded-circle mb-3" width="100" height="100">
+                                                            <input type="file" name="image" class="form-control mb-1">
                                                             <p class="fz-12">Chấp nhận định dạng JPG, PNG, Webp</p>
                                                         </div>
                                                         <div class="col-lg-12 col-md-12 col-sm-12">
                                                             <div class="mb-3">
                                                                 <label class="form-label">Giới thiệu</label>
-                                                                <textarea name="" id="" class="form-control" rows="3"></textarea>
+                                                                <textarea name="" id="" class="form-control"
+                                                                    rows="3"></textarea>
                                                             </div>
                                                         </div>
                                                         <div class="text-end mb-3">
-                                                            <button type="submit" class="cancel btn btn-outline-secondary rounded-1 px-4 me-2">Hủy</button>
-                                                            <button type="submit" class="accept btn btn-success rounded-1 px-4">Xác nhận</button>
+                                                            <button type="submit"
+                                                                class="cancel btn btn-outline-secondary rounded-1 px-4 me-2">Hủy</button>
+                                                            <button type="submit"
+                                                                class="accept btn btn-success rounded-1 px-4">Xác
+                                                                nhận</button>
                                                         </div>
                                                     </div>
                                                 </form>

@@ -125,7 +125,9 @@ body {
     scroll-behavior: smooth;
     background-color: #f3f3f9 !important;
 }
-
+a{
+    text-decoration: none !important;
+}
 .fz-8 {
     font-size: 8px !important;
 }
@@ -200,18 +202,11 @@ body {
     height: 60px;
 }
 
-.icon-item i {
-    font-size: 22px !important;
-    color: #7D7878;
-    padding: 15px;
-}
 
-.icon-item.fa-user {
-    padding-left: 30px !important;
-}
 
 .bx.bx-search-alt-2 {
-    font-size: 24px !important;
+    margin-top: 3px;
+    font-size: 20px ;
 }
 
 /* menu header  */
@@ -316,9 +311,32 @@ body {
     right: 20px;
     top: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
+
+.app-search{
+        min-width: 350px;
+    
+}
+
+.content-search-mnpoly:hover{
+    text-decoration: underline !important;
+}
+.dropdown-toggle::after{
+    display: none !important;
+}
+.gear-profile:hover + .dropdown-icon-profile,
+.dropdown-icon-profile:hover {
+    display: block;
+}
+
+
 .gear-profile:hover+.dropdown-icon-profile {
+    display: block;
+    border-radius: 0.375rem;
+}
+.acount-profile:hover+.dropdown-icon-profile {
     display: block;
     border-radius: 0.375rem;
 }
@@ -327,9 +345,59 @@ body {
     border-radius: 0.375rem;
     display: block;
 }
+.dropdown-icon-profile.active {
+    border-radius: 0.375rem;
+    display: block;
+}
+.icon-item {
+    text-align: center;
+    display: inline-block;
+    margin: 3px;
+}
+
+.box-icon-profile {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.box-icon-profile:hover {
+    background-color: #e6eefd;
+}
+
+.icon-item i {
+    font-size: 16px !important;
+    color: #878a99;
+    transition: color 0.3s ease;
+}
+.icon-item i:hover{
+    color: #686666;
+}
+.acount-profile i {
+    font-size: 20px !important;
+}
+.icon-item .fa-user {
+    padding: 10px;
+}
 
 hr {
     margin: 0.3rem 0 !important;
+}
+/* search recent */
+.search-recent-item{
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    border-radius: 13px;
+    padding: 6px 20px;
+    display: inline-block;
+}
+.search-recent-item:hover{
+    background-color: #c2c4d0;
+    color: #ffffff;
 }
 
 /* aside menu acount  */
