@@ -91,11 +91,37 @@
       }
     });
   };
+  FS.showMenuActionEllipsis = () => {
+    $(".ellipsis-vertical").each(function () {
+      $(".ellipsis-vertical").click(function (e) {
+        e.stopPropagation(); // Ngăn sự kiện click lan ra ngoài
+
+        $(".dropdown-ellipsis-vertical").addClass("d-none");
+
+        $(this)
+          .closest(".address-order")
+          .find(".dropdown-ellipsis-vertical")
+          .toggleClass("d-none");
+      });
+      $(document).on("click", function () {
+        $(".dropdown-ellipsis-vertical").addClass("d-none");
+      });
+      $(document).on("click", ".dropdown-ellipsis-vertical", function (e) {
+        e.stopPropagation();
+      });
+    });
+  };
+
+  FS.setUpSelect2 = () => {
+    $('.setUpSelect2').select2();
+  }
 
   $(document).ready(function () {
     FS.animateMenuLink();
     FS.showSubMenu();
     FS.showSubMenuLv3();
     FS.searchKeyUpShowPaper();
+    FS.showMenuActionEllipsis();
+    FS.setUpSelect2();
   });
 })(jQuery);

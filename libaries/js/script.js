@@ -23,3 +23,21 @@ const offcanvasElementList = document.querySelectorAll(".offcanvas");
 const offcanvasList = [...offcanvasElementList].map(
   (offcanvasEl) => new bootstrap.Offcanvas(offcanvasEl)
 );
+// positon fixed menu
+window.addEventListener("scroll", function () {
+  var navbar = document.querySelector("nav");
+  if (window.scrollY > 200) {
+    navbar.classList.add(
+      "fixed-top",
+      "animate__animated",
+      "animate__slideInDown"
+    );
+  } else {
+    navbar.classList.remove(
+      "fixed-top",
+      "animate__animated",
+      "animate__slideInDown"
+    );
+  }
+});
+
