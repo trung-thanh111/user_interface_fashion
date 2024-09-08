@@ -92,8 +92,8 @@
     });
   };
   FS.showMenuActionEllipsis = () => {
-    $(".ellipsis-vertical").each(function () {
-      $(".ellipsis-vertical").click(function (e) {
+    $(".fa-ellipsis-vertical").each(function () {
+      $(".fa-ellipsis-vertical").click(function (e) {
         e.stopPropagation(); // Ngăn sự kiện click lan ra ngoài
 
         $(".dropdown-ellipsis-vertical").addClass("d-none");
@@ -113,8 +113,23 @@
   };
 
   FS.setUpSelect2 = () => {
-    $('.setUpSelect2').select2();
-  }
+    $(".setUpSelect2").select2();
+  };
+
+  FS.clickShowPass = () => {
+    $(document).on("click", ".icon-eye-password", function () {
+      var inputTypePassword = $(this)
+        .closest(".input-group")
+        .find(".input-group-password");
+      if (inputTypePassword.attr("type") == "password") {
+        inputTypePassword.attr("type", "text");
+      } else {
+        inputTypePassword.attr("type", "password");
+      }
+
+      $(this).children().toggleClass("d-none");
+    });
+  };
 
   $(document).ready(function () {
     FS.animateMenuLink();
@@ -123,5 +138,6 @@
     FS.searchKeyUpShowPaper();
     FS.showMenuActionEllipsis();
     FS.setUpSelect2();
+    FS.clickShowPass();
   });
 })(jQuery);
