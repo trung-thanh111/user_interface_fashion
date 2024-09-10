@@ -884,6 +884,30 @@ hr {
 
 
 
+/* Contact Page */
+.container contact p-0  {
+    position: relative; /* Đặt container ở vị trí tương đối để sử dụng với pseudo-element */
+  }
+  
+  .underline-text {
+    display: block; /* Đảm bảo đoạn văn là một khối */
+    width: 100%; /* Kéo dài đoạn văn hết chiều rộng container */
+    padding-bottom: 10px; /* Khoảng cách dưới chữ */
+    position: relative; /* Để gắn đường gạch bên dưới */
+    margin: 0; /* Xóa margin mặc định nếu có */
+  }
+  
+  .underline-text::after {
+    content: ""; /* Tạo nội dung rỗng cho đường gạch */
+    display: block; /* Hiển thị như một khối */
+    width: 100%; /* Độ dài của đường gạch bằng độ dài của container */
+    height: 1px; /* Độ dày của đường gạch */
+    background-color: #999; /* Màu sắc của đường gạch */
+    margin-top: 5px; /* Khoảng cách giữa đoạn văn và đường gạch */
+    position: absolute; /* Đặt đường gạch dưới đoạn văn */
+    left: 0; /* Căn đường gạch sát bên trái container */
+    bottom: 0; /* Đặt đường gạch sát đáy đoạn văn */
+  }
 /* // icon-mxh  */
 .fa-facebook {
     color: #4267B2 !important;
