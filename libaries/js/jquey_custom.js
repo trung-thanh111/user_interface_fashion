@@ -91,27 +91,6 @@
       }
     });
   };
-  FS.showMenuActionEllipsis = () => {
-    $(".fa-ellipsis-vertical").each(function () {
-      $(".fa-ellipsis-vertical").click(function (e) {
-        e.stopPropagation(); // Ngăn sự kiện click lan ra ngoài
-
-        $(".dropdown-ellipsis-vertical").addClass("d-none");
-
-        $(this)
-          .closest(".address-order")
-          .find(".dropdown-ellipsis-vertical")
-          .toggleClass("d-none");
-      });
-      $(document).on("click", function () {
-        $(".dropdown-ellipsis-vertical").addClass("d-none");
-      });
-      $(document).on("click", ".dropdown-ellipsis-vertical", function (e) {
-        e.stopPropagation();
-      });
-    });
-  };
-
   FS.setUpSelect2 = () => {
     $(".setUpSelect2").select2();
   };
@@ -130,14 +109,53 @@
       $(this).children().toggleClass("d-none");
     });
   };
+  FS.activeColorChoosed = () => {
+    $(document).on("click", ".color-item", function () {
+      let _this = $(this);
+      $(".color-item").removeClass("active");
+      _this.toggleClass("active");
+    });
+  };
+  FS.activeSizeChoosed = () => {
+    $(document).on("click", ".size-item", function () {
+      let _this = $(this);
+      $(".size-item").removeClass("active");
+      _this.toggleClass("active");
+    });
+  };
+  FS.showhideAds = () => {
+    $(document).on("click", ".delete-ads-aside", function () {
+      console.log(2312);
+      $(".image-ads-item").toggleClass("hidden-visibility");
+    });
+  };
+  FS.boxQuantity = () => {
+    $(".quantity-minus, .quantity-plus").click(function () {
+      var $inputVisible = $(this).siblings("input.form-control");
+      var $inputHidden = $(this).siblings('input[type="hidden"]');
+
+      var value = parseInt($inputVisible.val(), 10);
+      if ($(this).hasClass("quantity-minus") && value > 1) {
+        value--;
+      } else if ($(this).hasClass("quantity-plus")) {
+        value++;
+      }
+
+      $inputVisible.val(value);
+      $inputHidden.val(value);
+    });
+  };
 
   $(document).ready(function () {
     FS.animateMenuLink();
     FS.showSubMenu();
     FS.showSubMenuLv3();
     FS.searchKeyUpShowPaper();
-    FS.showMenuActionEllipsis();
     FS.setUpSelect2();
     FS.clickShowPass();
+    FS.activeColorChoosed();
+    FS.activeSizeChoosed();
+    FS.boxQuantity();
+    FS.showhideAds();
   });
 })(jQuery);
