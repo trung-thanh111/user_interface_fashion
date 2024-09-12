@@ -145,6 +145,48 @@
       $inputHidden.val(value);
     });
   };
+  FS.backToTop = () => {
+    window.addEventListener("scroll", () => {
+      // bắt sự kiện cuộn mà hình theo chiều thẳng đứng hơn 300 ...
+      if (window.scrollY > 300) {
+        $(".back-to-top").removeClass("d-none");
+      } else {
+        $(".back-to-top").addClass("d-none");
+      }
+    });
+    $(document).on("click", ".back-to-top", () => {
+      // bắt sk click và scroll về top 0
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  };
+
+  // FS.chooseOneSize = () => {
+  //   $(document).on("click", ".choose-size-item input", function () {
+      
+  //     if ($(this).is(":checked")) {
+  //       console.log("Selected size:", $(this).next('p').text());
+  //     }
+  //   });
+  // }
+
+  FS.chooseColorActive = () => {
+    $(document).on("click", ".img-choose-color", function() {
+      // chỉ một phàn tuer cùng class đc click đc active
+      $('.img-choose-color').removeClass("active");
+      $(this).addClass("active");
+    });
+  }
+  FS.chooseMoneyActive = () => {
+    $(document).on("click", ".box-item-choose-money", function() {
+      // chỉ một phàn tuer cùng class đc click đc active
+      $('.box-item-choose-money').removeClass("active");
+      $(this).addClass("active");
+    });
+  }
+  
 
   $(document).ready(function () {
     FS.animateMenuLink();
@@ -157,5 +199,9 @@
     FS.activeSizeChoosed();
     FS.boxQuantity();
     FS.showhideAds();
+    FS.backToTop();
+    FS.chooseColorActive()
+    FS.chooseMoneyActive()
+    // FS.chooseOneSize()
   });
 })(jQuery);
