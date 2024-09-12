@@ -171,13 +171,15 @@ body {
 }
 
 a {
-
+    color: #6c757d;
     cursor: pointer;
     text-decoration: none !important;
 }
+
 .hidden-visibility {
     visibility: hidden;
 }
+
 .fz-8 {
     font-size: 8px !important;
 }
@@ -345,12 +347,9 @@ a {
 }
 
 /* breadcumd  */
-.bg-color-white {
-    background-color: #FFFFFF !important;
-}
 
 .bg-main-color {
-    background-color: #f3f3f9 !important;
+    background-color: #f3f3f9;
 }
 
 .breadcrumb-item.active {
@@ -787,7 +786,7 @@ hr {
 }
 
 .accordion-item:last-of-type {
-    border-left: 5px solid #6cd1c4 !important;
+    border-left: 5px solid #6cd1c4;
     border-top: 1px solid #6cd1c4;
     border-bottom: 1px solid #6cd1c4;
 
@@ -868,7 +867,8 @@ hr {
     cursor: pointer;
 
 }
-.cart-text{
+
+.cart-text {
     background-color: #12cab2;
     color: #ffffff;
     padding: 5px 24px 5px 10px;
@@ -879,35 +879,174 @@ hr {
 
 }
 
+/* categories product  */
+.splide__track--nav>.splide__list>.splide__slide.is-active {
+    border: 0px solid gray !important;
+}
+
+.splide__track--nav>.splide__list>.splide__slide {
+    border: 0 !important;
+}
+
+.splide__arrow svg {
+    fill: #7c7a7a !important;
+    font-weight: 600;
+}
+
+.form-check-input:checked {
+    background-color: #14b6a0 !important;
+    border-color: #14b6a0 !important;
+}
+
+.form-check-input:focus {
+    box-shadow: none !important;
+}
+
+#thumbnail-carousel2 .splide__arrow {
+    display: none !important;
+}
+
+.card.card-product {
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: all 0.3s;
+    padding: 10px 0;
+}
+
+.card.card-product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 20px 0px rgba(119, 119, 119, 0.6);
+}
+
+.card.card-product:hover .box-action {
+    transform: translateY(0%);
+    color: #027090;
+    transition: all 0.3s;
+}
+
+.box-action {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    color: #fff;
+    transform: translateY(100%);
+    transition: all 0.3s;
+}
+
+.box-action a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    padding: 12px 0;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.action-cart-item-buy {
+    background-color: #b8bebd;
+}
+
+.action-cart-item-buy:hover {
+    background-color: #14b6a0;
+}
+
+.action-cart-item-add {
+    background-color: #b8bebd;
+}
+
+.action-cart-item-add:hover {
+    background-color: #0056b3;
+}
+
+.box-item-choose-money {
+    border: 0.3px solid gray;
+    border-radius: 3px;
+    color: #6c757d;
+}
+
+.box-item-choose-money:hover {
+    background-color: #878a99;
+    border: 0.3px solid #878a99;
+    color: #fff;
+}
+
+.box-item-choose-money.active {
+    background-color: #878a99;
+    border: 0.3px solid #878a99;
+    color: #fff;
+
+}
+
+.img-choose-color.active {
+    border: 2px solid gray;
+    padding: 2px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* forgot pass  */
 
 
+.progress-bar {
+    --bs-progress-bar-bg: #14b6a0 !important;
+    height: 3px !important;
 
+}
 
+.progress,
+.progress-stacked {
+    --bs-progress-bar-bg: #14b6a0 !important;
+    height: 3px !important;
+
+}
+
+.bg-btn-progress {
+    background-color: #e9ecef !important;
+}
 
 /* Contact Page */
-.container contact p-0  {
-    position: relative; /* Đặt container ở vị trí tương đối để sử dụng với pseudo-element */
-  }
-  
-  .underline-text {
-    display: block; /* Đảm bảo đoạn văn là một khối */
-    width: 100%; /* Kéo dài đoạn văn hết chiều rộng container */
-    padding-bottom: 10px; /* Khoảng cách dưới chữ */
-    position: relative; /* Để gắn đường gạch bên dưới */
-    margin: 0; /* Xóa margin mặc định nếu có */
-  }
-  
-  .underline-text::after {
-    content: ""; /* Tạo nội dung rỗng cho đường gạch */
-    display: block; /* Hiển thị như một khối */
-    width: 100%; /* Độ dài của đường gạch bằng độ dài của container */
-    height: 1px; /* Độ dày của đường gạch */
-    background-color: #999; /* Màu sắc của đường gạch */
-    margin-top: 5px; /* Khoảng cách giữa đoạn văn và đường gạch */
-    position: absolute; /* Đặt đường gạch dưới đoạn văn */
-    left: 0; /* Căn đường gạch sát bên trái container */
-    bottom: 0; /* Đặt đường gạch sát đáy đoạn văn */
-  }
+
+.underline-text {
+    display: block;
+    width: 100%;
+    padding-bottom: 10px;
+    position: relative;
+    margin: 0;
+}
+
+.underline-text::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #999;
+    margin-top: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.back-to-top {
+    transform: ease-in-out 0.5s;
+}
+
+.back-to-top:hover {
+    transform: scale(0.95);
+
+}
+
+
+
 /* // icon-mxh  */
 .fa-facebook {
     color: #4267B2 !important;
