@@ -18,11 +18,7 @@ const tooltipTriggerList = document.querySelectorAll(
 const tooltipList = [...tooltipTriggerList].map(
   (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
 );
-// offcanvas
-const offcanvasElementList = document.querySelectorAll(".offcanvas");
-const offcanvasList = [...offcanvasElementList].map(
-  (offcanvasEl) => new bootstrap.Offcanvas(offcanvasEl)
-);
+
 // positon fixed menu
 window.addEventListener("scroll", function () {
   var navbar = document.querySelector("nav");
@@ -42,16 +38,16 @@ window.addEventListener("scroll", function () {
 });
 // băng chuyền hình ảnh detail
 document.addEventListener("DOMContentLoaded", function () {
-  // image main 
-  var mainCarousel = document.querySelector('#main-carousel');
-  if(mainCarousel){
+  // image main
+  var mainCarousel = document.querySelector("#main-carousel");
+  if (mainCarousel) {
     mainCarousel = new Splide(mainCarousel, {
       type: "fade",
       heightRatio: 1,
       pagination: false,
       arrows: false,
       cover: false,
-      // reponsive image main 
+      // reponsive image main
       breakpoints: {
         1200: {
           heightRatio: 0.75, // Cho col-lg-5x
@@ -70,8 +66,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Thumbnail carousel
-  var thumbnailCarousel = document.querySelector('#thumbnail-carousel')
-  if(thumbnailCarousel){
+  var thumbnailCarousel = document.querySelector("#thumbnail-carousel");
+  if (thumbnailCarousel) {
     thumbnailCarousel = new Splide(thumbnailCarousel, {
       fixedWidth: 100,
       fixedHeight: 60,
@@ -100,33 +96,100 @@ document.addEventListener("DOMContentLoaded", function () {
     }).mount();
   }
   // Đồng bộ hai băng chuyền
-  if(mainCarousel && thumbnailCarousel){
+  if (mainCarousel && thumbnailCarousel) {
     mainCarousel.sync(thumbnailCarousel);
   }
-
 });
+// prodcut
 document.addEventListener("DOMContentLoaded", function () {
-  let thumbnail_carousel2 = document.querySelector('#thumbnail-carousel2')
-  if(thumbnail_carousel2){
+  let thumbnail_carousel2 = document.querySelector("#thumbnail-carousel2");
+  if (thumbnail_carousel2) {
     new Splide(thumbnail_carousel2, {
-      type        : 'slide',
-      autoplay    :3000,
-      gap         : 10,
-      perPage     : 4, // hiển thị 4 item 
-      perMove     : 1, // di chuyển 1 lần 1 item
-      rewind      : true, 
-      pagination  : true,
+      type: "slide",
+      autoplay: 3000,
+      gap: 10,
+      perPage: 4, // hiển thị 4 item
+      perMove: 1, // di chuyển 1 lần 1 item
+      rewind: true,
+      pagination: true,
       isNavigation: false,
       breakpoints: {
         600: {
-          perPage: 2,           
-          gap: 5,               
+          perPage: 2,
+          gap: 5,
         },
         1024: {
-          perPage: 3,           
-        }
-      }
-    } ).mount();
-
+          perPage: 3,
+        },
+      },
+    }).mount();
+  }
+});
+// post
+document.addEventListener("DOMContentLoaded", function () {
+  let thumbnail_carousel2 = document.querySelector("#thumbnail-carousel3");
+  if (thumbnail_carousel2) {
+    new Splide(thumbnail_carousel2, {
+      type: "slide",
+      autoplay: 3000,
+      gap: 10,
+      perPage: 7, // hiển thị 4 item
+      perMove: 1, // di chuyển 1 lần 1 item
+      rewind: true,
+      height: 240,
+      pagination: true,
+      isNavigation: false,
+      breakpoints: {
+        600: {
+          perPage: 3,
+          gap: 5,
+        },
+        780: {
+          perPage: 4,
+        },
+        1024: {
+          perPage: 5,
+        },
+        1200: {
+          perPage: 6,
+        },
+      },
+    }).mount();
+  }
+});
+document.addEventListener("DOMContentLoaded", function () {
+  // image main
+  var mainCarousel = document.querySelector("#main-carousel2");
+  if (mainCarousel) {
+    mainCarousel = new Splide(mainCarousel, {
+      type: "slide",
+      autoplay: 5000,
+      gap: 10,
+      perPage: 1, 
+      perMove: 1,
+      rewind: true,
+      height: 580,
+      pagination: true,
+      isNavigation: false,
+      heightRatio: 1,
+      pagination: true,
+      arrows: true,
+      cover: false,
+      // reponsive image main
+      breakpoints: {
+        1200: {
+          heightRatio: 0.75,
+        },
+        900: {
+          heightRatio: 0.5,
+        },
+        600: {
+          heightRatio: 0.3,
+        },
+        480: {
+          heightRatio: 0.2, // Màn hình nhỏ hơn 480px
+        },
+      },
+    }).mount();
   }
 });

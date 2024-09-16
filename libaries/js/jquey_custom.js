@@ -82,15 +82,38 @@
       //call back
       FS.searchKeyUpShowPaper();
     });
-    $(document).on("blur", ".search-header", function () {
-      $(".wallpaper").addClass("d-none");
+    $(document).on("mouseenter", ".search-header, .wallpaper", function () {
+      $(".wallpaper").removeClass("d-none");
+    });
+    $(document).on("mouseleave", ".search-header, .wallpaper", function () {
+      setTimeout(function () {
+        if (
+          !$(".search-header").is(":hover") &&
+          !$(".wallpaper").is(":hover")
+        ) {
+          $(".wallpaper").addClass("d-none");
+        }
+      }, 500);
     });
     $(document).on("focus", ".search-header", function () {
-      if ($(".search-header").val().length > 0) {
+      if ($(".search-header").val().length > 0 || $(".wallpaper").length) {
         $(".wallpaper").removeClass("d-none");
       }
     });
   };
+  FS.getKeywordClickKeywordRecent = () => {
+    $(document).on("click", ".search-recent-item", function () {
+      let _this = $(this);
+      //sử dụng this để lấy ra 1 phần tử đc click
+      let keywordRecent = $.trim(_this.find(".keyword-recent").text());
+      if($(".search-header").val() > 0){
+        $(".search-header").val() = " "
+      }else{
+        $(".search-header").val(keywordRecent)
+      }
+    });
+  };
+
   FS.setUpSelect2 = () => {
     $(".setUpSelect2").select2();
   };
@@ -165,7 +188,7 @@
 
   // FS.chooseOneSize = () => {
   //   $(document).on("click", ".choose-size-item input", function () {
-      
+
   //     if ($(this).is(":checked")) {
   //       console.log("Selected size:", $(this).next('p').text());
   //     }
@@ -173,26 +196,26 @@
   // }
 
   FS.chooseColorActive = () => {
-    $(document).on("click", ".img-choose-color", function() {
+    $(document).on("click", ".img-choose-color", function () {
       // chỉ một phàn tuer cùng class đc click đc active
-      $('.img-choose-color').removeClass("active");
+      $(".img-choose-color").removeClass("active");
       $(this).addClass("active");
     });
-  }
+  };
   FS.chooseMoneyActive = () => {
-    $(document).on("click", ".box-item-choose-money", function() {
+    $(document).on("click", ".box-item-choose-money", function () {
       // chỉ một phàn tuer cùng class đc click đc active
-      $('.box-item-choose-money').removeClass("active");
+      $(".box-item-choose-money").removeClass("active");
       $(this).addClass("active");
     });
-  }
-  
+  };
 
   $(document).ready(function () {
     FS.animateMenuLink();
     FS.showSubMenu();
     FS.showSubMenuLv3();
     FS.searchKeyUpShowPaper();
+    FS.getKeywordClickKeywordRecent();
     FS.setUpSelect2();
     FS.clickShowPass();
     FS.activeColorChoosed();
@@ -200,8 +223,8 @@
     FS.boxQuantity();
     FS.showhideAds();
     FS.backToTop();
-    FS.chooseColorActive()
-    FS.chooseMoneyActive()
+    FS.chooseColorActive();
+    FS.chooseMoneyActive();
     // FS.chooseOneSize()
   });
 })(jQuery);
