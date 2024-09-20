@@ -209,6 +209,13 @@
       $(this).addClass("active");
     });
   };
+  FS.nextTab = () => {
+    $(document).on('click', '.next-tab', function() {
+        var nextTab = $(this).data('nexttab');
+        $('#' + nextTab).tab('show')
+    });
+}
+
 
   $(document).ready(function () {
     FS.animateMenuLink();
@@ -225,6 +232,6 @@
     FS.backToTop();
     FS.chooseColorActive();
     FS.chooseMoneyActive();
-    // FS.chooseOneSize()
+    FS.nextTab()
   });
 })(jQuery);
