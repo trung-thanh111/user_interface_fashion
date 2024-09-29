@@ -1225,6 +1225,15 @@ hr {
     right: 0;
 }
 
+/* giới thiệu */
+.img-about{
+    max-width: 100%;
+}
+/* .text-justify-css{
+    text-align: justify;
+} */
+
+
 /* footer  */
 footer {
     margin-top: 50px;
