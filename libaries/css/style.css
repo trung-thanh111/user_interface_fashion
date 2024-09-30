@@ -595,11 +595,11 @@ hr {
 
 .select2-container--default .select2-selection--single .select2-selection__rendered {
     color: #595c5f !important;
-    line-height: 33px !important;
+    line-height: 33px !important; 
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow {
-    height: 35px !important;
+    height : 35px !important;
     position: absolute;
     top: 1px;
     right: 5px !important;
@@ -1214,3 +1214,10 @@ footer {
     color: #2565db !important;
     text-decoration: underline !important;
 }
+.fl-wrapper {
+    top: 20px !important;
+    z-index: 9999 !important;
+}
+/* .fl-flasher.fl-container.fl-show{
+    padding: 6px 10px !important;
+} */

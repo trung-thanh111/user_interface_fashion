@@ -215,6 +215,26 @@
         $('#' + nextTab).tab('show')
     });
 }
+FS.CheckBox = () => {
+    // Xử lý khi checkbox "check-all" được click
+    $('#check-all').on('change', function () {
+        // Đặt thuộc tính 'checked' cho tất cả checkbox "checkbox-item" giống với trạng thái của checkbox "check-all"
+        $('.checkbox-item').prop('checked', this.checked);
+    });
+  
+    // Xử lý khi từng checkbox "checkbox-item" được click
+    $('.checkbox-item').on('change', function () {
+        // Kiểm tra nếu tất cả các checkbox "checkbox-item" đều được chọn
+        if ($('.checkbox-item:checked').length === $('.checkbox-item').length) {
+            // Đặt checkbox "check-all" thành checked
+            $('#check-all').prop('checked', true);
+        } else {
+            // Nếu có ít nhất một checkbox "checkbox-item" không được chọn, bỏ chọn checkbox "check-all"
+            $('#check-all').prop('checked', false);
+        }
+    });
+
+}
 
 
   $(document).ready(function () {
@@ -233,5 +253,6 @@
     FS.chooseColorActive();
     FS.chooseMoneyActive();
     FS.nextTab()
+    FS.CheckBox()
   });
 })(jQuery);
